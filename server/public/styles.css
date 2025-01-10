@@ -1,0 +1,263 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+  background-color: #62568b;
+  color: #e7defd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #e7defd;
+  font-size: 1.5rem;
+  padding: 0 1rem; /* Add padding to the left and right */
+}
+
+header a {
+  color: #e7defd;
+  padding: 0 1rem; /* Add padding to the left and right */
+  text-decoration: none;
+}
+
+section {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  border-radius: 12px;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  box-sizing: border-box;
+  padding: 0.2rem 1rem; /* Add padding to the left and right */
+}
+
+footer {
+  color: #62568b;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.trainer {
+  border: 1px solid #aaaaaa;
+  border-radius: 8pt;
+  background-color: rgb(240, 240, 240);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: #e7defd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #443b60;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4c3885;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.form-group button:hover {
+  background-color: #423072;
+}
+
+.schedule-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+}
+
+.schedule-item h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.schedule-item p {
+  margin: 0.5rem 0;
+}
+
+.signup-button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.signup-button:hover {
+  background-color: #218838;
+}
+
+#deleteProfileButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #a33328;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+#deleteProfileButton:hover {
+  background-color: #882a21;
+}
+
+.bookButton {
+  padding: 0.5rem 1rem;
+  background-color: #47ac56;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.bookButton:hover {
+  background-color: #179a24;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4c3885;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.button:hover {
+  background-color: #423072;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.input:focus {
+  border-color: #423072;
+  outline: none;
+}
+
+input,
+button {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4c3885;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10pt;
+}
+
+button:hover {
+  background-color: #423072;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#registrationSection {
+  font-size: 0.8rem;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+#loginSection {
+  font-size: 0.8rem;
+  max-width: 30em;
+  margin: 0 auto;
+}

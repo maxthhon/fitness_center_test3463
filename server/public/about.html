@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>О нас</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <!-- <li><a href="profile.html">Мой профиль</a></li> -->
+                <!-- <li><a href="login.html">Вход/Регистрация</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Наши тренеры</h2>
+            <div id="trainersList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Спортивный Центр</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("/trainers")
+                .then((response) => response.json())
+                .then((data) => {
+                    const trainersList = document.getElementById("trainersList");
+                    data.forEach((trainer) => {
+                        const trainerDiv = document.createElement("div");
+                        trainerDiv.classList.add("trainer");
+                        trainerDiv.innerHTML = `
+                            <h3>${trainer.name}</h3>
+                            <p>Телефон: ${trainer.phone}</p>
+                            <p>Специальность: ${trainer.speciality}</p>
+                        `;
+                        trainersList.appendChild(trainerDiv);
+                    });
+                })
+                .catch((error) => {
+                    console.error("Error fetching trainers:", error);
+                });
+        });
+    </script>
+</body>
+
+</html>

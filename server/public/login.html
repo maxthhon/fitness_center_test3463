@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход/Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Вход/Регистрация</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="loginSection">
+            <h2>Вход</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Почта:</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Пароль:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Войти</button>
+                <p id="loginError" class="error-message"></p>
+            </form>
+            <p>Нет аккаунта? <a href="#" onclick="showRegistrationForm()">Зарегистрироваться</a></p>
+        </section>
+
+        <section id="registrationSection" style="display: none;">
+            <h2>Регистрация</h2>
+            <form id="registrationForm">
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" required>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" required>
+                <label for="email">Почта:</label>
+                <input type="email" id="email" required>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" required>
+                <label for="confirmPassword">Повторите пароль:</label>
+                <input type="password" id="confirmPassword" required>
+                <button type="submit">Создать аккаунт</button>
+                <p id="registrationError" class="error-message"></p>
+            </form>
+            <p>Уже есть аккаунт? <a href="#" onclick="showLoginForm()">Войти</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Спортивный Центр</p>
+    </footer>
+
+    <script>
+        function showRegistrationForm() {
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('registrationSection').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('registrationSection').style.display = 'none';
+            document.getElementById('loginSection').style.display = 'block';
+        }
+    </script>
+    <script src="auth.js"></script>
+</body>
+
+</html>
